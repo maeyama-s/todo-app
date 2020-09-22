@@ -11,6 +11,38 @@ Things you may want to cover:
 
 * Configuration
 
+#
+
+# テーブル設計
+
+## usersテーブル
+
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| name               | string | null: false |
+| encrypted_password | string | null: false |
+
+### Association
+
+- has_many :tasks
+
+## tasksテーブル
+
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| user        | references | foreign_key: true |
+| title       | string     | null: false       |
+| details     | string     |                   |
+| deadline    | date       |                   |
+| category_id | integer    | null: false       |
+| priority_id | integer    | null: false       |
+
+### Association
+
+- belongs_to :user
+
+#
+
 * Database creation
 
 * Database initialization
