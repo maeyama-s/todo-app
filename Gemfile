@@ -57,3 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'rails_12factor'
 end
+
+# ユーザー管理機能を簡単に実装するためのGem
+gem 'devise'
