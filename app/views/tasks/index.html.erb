@@ -1,11 +1,6 @@
-<%= render "shared/header" %>
-
 <div class="contents row">
   <% @tasks.each do |task| %>
-    <p><%= task.title %></p>
+    <p><%= link_to task.title, task_path(task.id) %></p>
     <p><%= task.details %></p>
   <% end %>
 </div>
-
-
-<%= render "shared/footer" %>

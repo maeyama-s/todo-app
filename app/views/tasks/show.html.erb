@@ -1,0 +1,9 @@
+<%= @task.user.nickname %>
+<%= @task.title %>
+<%= @task.details %>
+<%= @task.deadline %>
+<%= @task.category.name %>
+<%= @task.priority.name %>
+
+<%= link_to '編集', method: :get %>
+<%= link_to '削除', method: :delete %>
