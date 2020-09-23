@@ -15,21 +15,28 @@ ul,li {
 }
 /* リセットCSS */
 
+/* paddingとborderを幅と高さに含める */
+* {
+  box-sizing: border-box;
+}
+
+/* 背景画像 */
 body {
   background-image: url(./task-4.jpg);
-  background-size: cover;
-  background-repeat: repeat-y;
+  background-size: auto;
 }
 
 h1, h2, h3, h4, h5, h6, body {
+  /* 行ボックスの高さ */
   line-height: 1.57;
+  /* テキストの時間のスペース */
   letter-spacing: 0.15em;
   font-size: 16px;
   color: #666;
   margin: 0;
 }
 
-
+/* ユーザー管理画面 */
 .row {
   width: 100%;
   margin-left: auto;
@@ -37,6 +44,7 @@ h1, h2, h3, h4, h5, h6, body {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 660px;
+  /* Internet Explorerの独自拡張で、指定要素を拡大表示する際に使用。（1.0が標準サイズ） */
   *zoom: 1;
 }
 
@@ -45,7 +53,6 @@ h1, h2, h3, h4, h5, h6, body {
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color: white;
-  box-sizing: border-box;
 }
 
 iv.contents.row h2 {
@@ -69,12 +76,49 @@ form input, form textarea {
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
-  font-family: "游ゴシック", "YuGothic";
 }
+
 form input[type="submit"] {
   background-color: #57C3E9;
   border-radius: 20px;
   color: #fff;
   border: 0;
   font-size: 18px;
+}
+
+/* header */
+
+.nav {
+  font-size: 20px;
+  width: 100vw;
+  padding: 4vh 15vw;
+  background-color: rgb(245, 241, 241);
+  /* 指定された要素の子要素が横並びになる */
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.lists-right {
+}
+
+li {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: rgb(183, 224, 248);
+  border-radius: 50px;
+}
+
+.login, .sign-up {
+  text-decoration: none;
+}
+
+/* header */
+
+.space {
+  height: 10000px;
 }
