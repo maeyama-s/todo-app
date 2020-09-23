@@ -1,5 +1,17 @@
 <%= render "shared/header" %>
 
-<h1>newページ</h1>
+<div class="contents row">
+  <div class="container">
+    <h3>タスクを作成する</h3>
+    <%= form_with(model: @task, local: true) do |form| %>
+      <%= form.text_field :title, placeholder: "title" %>
+      <%= form.text_area :details, placeholder: "details" %>
+      <%= form.date_select :deadline, placeholder: "deadline" %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"task-category"}) %>
+      <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
 
 <%= render "shared/footer" %>

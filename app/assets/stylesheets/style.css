@@ -88,11 +88,6 @@ form input[type="submit"] {
 
 /* header */
 
-.todo-icon {
-  width: 5vw;
-  margin-right: 20vw;
-}
-
 .nav {
   font-size: 20px;
   width: 100vw;
@@ -101,6 +96,11 @@ form input[type="submit"] {
   /* 指定された要素の子要素が横並びになる */
   display: flex;
   justify-content: flex-end;
+}
+
+.todo-icon {
+  width: 5vw;
+  margin-right: 20vw;
 }
 
 ul {
