@@ -63,3 +63,6 @@ gem 'devise'
 
 # Railsにおけるデバッグ用のGem
 gem 'pry-rails'
+
+# データベースへ保存せずにデータを取り扱うことができるGem
+gem 'active_hash'

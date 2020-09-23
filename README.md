@@ -33,7 +33,7 @@ Things you may want to cover:
 | ----------- | ---------- | ----------------- |
 | user        | references | foreign_key: true |
 | title       | string     | null: false       |
-| details     | string     |                   |
+| details     | text       |                   |
 | deadline    | date       |                   |
 | category_id | integer    | null: false       |
 | priority_id | integer    | null: false       |

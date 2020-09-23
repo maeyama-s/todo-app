@@ -98,6 +98,11 @@ form input[type="submit"] {
   justify-content: flex-end;
 }
 
+.todo-icon {
+  width: 5vw;
+  margin-right: 20vw;
+}
+
 ul {
   list-style: none;
   display: flex;
