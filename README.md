@@ -19,7 +19,8 @@ Things you may want to cover:
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
-| name               | string | null: false |
+| nickname           | string | null: false |
+| email              | string | primary key |
 | encrypted_password | string | null: false |
 
 ### Association
