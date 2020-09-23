@@ -1,8 +1,10 @@
 <header>
   <div class='nav'>
     <ul class='lists-right'>
+  <%= link_to image_tag("task-5.jpg", class:"todo-icon"), "/" %>
       <% if user_signed_in? %>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
+        <li><%= link_to 'タスク作成', new_task_path %></li>
         <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>

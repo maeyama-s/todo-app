@@ -88,6 +88,11 @@ form input[type="submit"] {
 
 /* header */
 
+.todo-icon {
+  width: 5vw;
+  margin-right: 20vw;
+}
+
 .nav {
   font-size: 20px;
   width: 100vw;
