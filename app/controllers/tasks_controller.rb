@@ -25,6 +25,16 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    task = Task.find(params[:id])
+    task.update(task_params)
+    redirect_to root_path
+  end
+
   # Classの外部から呼ばれたら困るメソッドを隔離、可読性向上
   private
   # 指定したキーを持つパラメーターのみを受け取るように制限する
