@@ -1,0 +1,12 @@
+.show_con {
+  margin: 50px auto;
+  height: 1360px;
+  width: 900px;
+  background-image: url(task-4.jpg);
+  background-size: cover;
+  padding: 50px;
+}
+
+.show_list {
+  list-style: none;
+}

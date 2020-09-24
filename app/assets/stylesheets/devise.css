@@ -1,0 +1,31 @@
+.devise_con {
+  width: 100%;
+  margin: 80px auto;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
+  background-color: white;
+  border-radius: 30px;
+}
+
+.devise_con h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  cursor: default;
+}
+
+form input {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #a4cf67;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}

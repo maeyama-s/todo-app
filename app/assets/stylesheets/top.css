@@ -1,0 +1,15 @@
+.todo {
+  font-size: 100px;
+  text-align: center;
+  font-family: fantasy;
+  margin-top: 50px;
+}
+
+.top_image {
+  margin: 50px auto;
+  height: 596px;
+  width: 900px;
+  background-image: url(task-1.jpg);
+  background-size: cover;
+  padding: 50px;
+}
