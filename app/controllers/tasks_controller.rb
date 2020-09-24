@@ -35,6 +35,12 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+    redirect_to root_path
+  end
+
   # Classの外部から呼ばれたら困るメソッドを隔離、可読性向上
   private
   # 指定したキーを持つパラメーターのみを受け取るように制限する
