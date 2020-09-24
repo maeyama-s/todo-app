@@ -1,10 +1,13 @@
 class TasksController < ApplicationController
   # tasksコントローラーのindexアクション以外にアクセスしようとするログインしていないユーザーはログインページへ遷移される。
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: :top
+
+  def top
+  end
 
   def index
     # タスク一覧表示させる(新規投稿順に並ぶように記述)
-    @tasks = Task.order("created_at DESC")
+    @tasks = Task.where(user_id: current_user.id).order("created_at DESC")
   end
 
   def new
