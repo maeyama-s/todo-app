@@ -1,7 +1,8 @@
 <header>
   <div class='nav'>
     <ul class='lists-right'>
-  <%= link_to image_tag("task-6.jpg", class:"todo-icon"), "/" %>
+  <%= link_to image_tag("task-6.jpg", class:"root-icon"), "/" %>
+  <%= link_to image_tag("task-5.jpg", class:"tasks-icon"), "/tasks" %>
       <% if user_signed_in? %>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
         <li><%= link_to 'タスク作成', new_task_path %></li>

@@ -93,9 +93,14 @@ form input[type="submit"] {
   border-bottom: 1px solid #333;
 }
 
-.todo-icon {
+.root-icon {
   width: 5vw;
-  margin-right: 20vw;
+  margin-right: 5vw;
+}
+
+.tasks-icon {
+  width: 5vw;
+  margin-right: 15vw;
 }
 
 ul {
