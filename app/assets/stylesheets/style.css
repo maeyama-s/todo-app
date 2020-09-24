@@ -20,12 +20,6 @@ ul,li {
   box-sizing: border-box;
 }
 
-/* 背景画像 */
-body {
-  background-image: url(./task-4.jpg);
-  background-size: auto;
-}
-
 h1, h2, h3, h4, h5, h6, body {
   /* 行ボックスの高さ */
   line-height: 1.57;
@@ -89,13 +83,14 @@ form input[type="submit"] {
 /* header */
 
 .nav {
-  font-size: 20px;
-  width: 100vw;
-  padding: 4vh 15vw;
-  background-color: rgb(245, 241, 241);
+  font-size: 14px;
+  width: 90vw;
+  padding: 2vh 15vw;
+  background-color: #fff;
   /* 指定された要素の子要素が横並びになる */
   display: flex;
-  justify-content: flex-end;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
 }
 
 .todo-icon {
@@ -106,24 +101,31 @@ form input[type="submit"] {
 ul {
   list-style: none;
   display: flex;
-}
-
-.lists-right {
+  align-items: center;
 }
 
 li {
   margin: 0 10px;
-  padding: 10px 20px;
-  background-color: rgb(183, 224, 248);
-  border-radius: 50px;
+  padding: 0 20px;
 }
 
-.login, .sign-up {
+a {
   text-decoration: none;
 }
 
 /* header */
 
-.space {
-  height: 10000px;
+.tasks {
+  margin: 50px auto;
+  height: 596px;
+  width: 900px;
+  background-image: url(task-1.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.back {
+  background-color: #fff;
+  border-radius: 10px;
+  display: inline-block;
 }

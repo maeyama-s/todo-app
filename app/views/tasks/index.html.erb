@@ -1,6 +1,8 @@
-<div class="contents row">
+<div class="tasks">
   <% @tasks.each do |task| %>
+  <div class="back">
     <p><%= link_to task.title, task_path(task.id) %></p>
     <p><%= task.details %></p>
+  </div>
   <% end %>
 </div>
