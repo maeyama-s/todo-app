@@ -6,4 +6,4 @@
 <%= @task.priority.name %>
 
 <%= link_to '編集', edit_task_path(@task.id), method: :get %>
-<%= link_to '削除', method: :delete %>
+<%= link_to '削除', "/tasks/#{@task.id}", method: :delete %>
