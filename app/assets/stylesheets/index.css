@@ -1,0 +1,17 @@
+.tasks {
+  margin: 50px auto;
+  height: 1360px;
+  width: 900px;
+  background-image: url(task-4.jpg);
+  background-size: cover;
+  padding: 50px;
+}
+
+.task {
+  background-color: rgb(251, 255, 212);
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 800px;
+  margin-bottom: 1%;
+  overflow: scroll;
+}

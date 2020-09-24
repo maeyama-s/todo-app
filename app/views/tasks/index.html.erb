@@ -1,6 +1,6 @@
 <div class="tasks">
   <% @tasks.each do |task| %>
-  <div class="back">
+  <div class="task">
     <p><%= link_to task.title, task_path(task.id) %></p>
     <p><%= task.details %></p>
   </div>
