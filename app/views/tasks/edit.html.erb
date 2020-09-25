@@ -1,5 +1,5 @@
-<div class="contents row">
-  <div class="container">
+
+  <div class="edit-container">
     <h3>編集する</h3>
     <%= form_with(model: @task, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "title" %>
@@ -10,4 +10,3 @@
       <%= form.submit "SEND" %>
     <% end %>
   </div>
-</div>
