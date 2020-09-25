@@ -14,7 +14,7 @@
     </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
+      <%# ログインの有無で表示が変わるように分岐%>
         <li>
           <div class="home">
             <%= link_to new_task_path, method: :get do %>
@@ -45,7 +45,7 @@
             <div class="signup-icon"></div>
           <% end %>
         </li>
-      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
+      <%# ログインの有無で表示が変わるように分岐%>
       <% end %>
     </ul>
   </div>

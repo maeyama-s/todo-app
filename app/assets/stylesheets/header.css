@@ -6,12 +6,12 @@
   /* 指定された要素の子要素が横並びになる */
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 5vw;
   z-index: 1;
-  background-color: white;
-  height: 100px;
 }
 
 .lists-left {
@@ -25,6 +25,10 @@
 
 .fa-home, .fa-calendar-alt, .fa-calendar-plus, .fa-user-circle {
   color: rgb(73, 73, 73);
+}
+
+.fa-home {
+  margin-right: 10px;
 }
 
 .lists-right {
