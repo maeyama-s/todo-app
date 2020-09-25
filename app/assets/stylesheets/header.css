@@ -1,7 +1,7 @@
 .header_con {
   font-size: 16px;
   width: 90vw;
-  padding: 4vh 10vw;
+  padding: 35px 10vw;
   border-bottom: 1px solid #333;
   /* 指定された要素の子要素が横並びになる */
   display: flex;
@@ -10,6 +10,7 @@
   left: 5vw;
   z-index: 1;
   background-color: white;
+  height: 100px;
 }
 
 .lists-left {
