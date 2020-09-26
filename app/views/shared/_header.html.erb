@@ -1,19 +1,51 @@
 <header>
   <div class='header_con'>
     <div class='lists-left'>
-      <div class="top"><%= link_to "TOP", "/" %></div>
-      <%= link_to "HOME", "/tasks" %>
+      <div class="top">
+        <%= link_to root_path, method: :get do %>
+          <i class="fas fa-home fa-fw fa-2x "></i>
+        <% end %>
+      </div>
+      <div class="home">
+        <%= link_to tasks_path, method: :get do %>
+          <i class="far fa-calendar-alt fa-fw fa-2x "></i>
+        <% end %>
+      </div>
     </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-        <li><%= link_to 'タスク作成', new_task_path %></li>
-        <li><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <%# ログインの有無で表示が変わるように分岐%>
+        <li>
+          <div class="home">
+            <%= link_to new_task_path, method: :get do %>
+              <i class="far fa-calendar-plus fa-fw fa-2x "></i>
+            <% end %>
+        </div>
+        </li>
+        <li>
+          <div class="user">
+            <%= link_to edit_user_registration_path, method: :get do %>
+              <i class="fas fa-user-circle fa-fw fa-2x "></i>
+            <% end %>
+          </div>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete, class: "logout" do %>
+            <div class="logout-icon"></div>
+          <% end %>
+        </li>
       <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
+        <li>
+          <%= link_to new_user_session_path, class: "login" do %>
+            <div class="login-icon"></div>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_registration_path, class: "sign-up" do %>
+            <div class="signup-icon"></div>
+          <% end %>
+        </li>
+      <%# ログインの有無で表示が変わるように分岐%>
       <% end %>
     </ul>
   </div>

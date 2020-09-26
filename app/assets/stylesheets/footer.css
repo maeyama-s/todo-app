@@ -1,7 +1,7 @@
 .footer_con {
   font-size: 16px;
   width: 90vw;
-  padding: 5vh 0;
+  padding-top: 5vh;
   margin: 0 auto;
   border-top: 1px solid #333;
   text-align: center;
@@ -9,9 +9,63 @@
 
 .mae {
   font-size: 50px;
-  font-family: fantasy;
+  margin: 5px 0;
 }
 
 .enquiry {
-  margin: 5vh 0;
+  margin: 0 0 5vh 0;
+}
+
+.icons {
+  margin-top: 30px;
+}
+
+.fa-4x {
+  margin-left: 20px;
+}
+
+.fb-blue {
+  color: #4267b2;
+  
+}
+
+.line-green {
+  color: #00B900;
+}
+
+.tw-blue {
+  color: #1da1f2;
+}
+
+.insta {/*アイコンの背景*/
+  margin: 0 3px 40px 0;
+  position: relative;/*相対配置*/
+  display: inline-block;
+  width: 55px;/*幅*/
+  height: 55px;/*高さ*/
+  vertical-align: middle;/*垂直中央に*/
+  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+  overflow: hidden;/*はみ出た部分を隠す*/
+  border-radius: 8px;/*角丸に*/
+}
+
+.insta:before {/*グラデーションを重ねるため*/
+  content: '';
+  position: absolute;/*絶対配置*/
+  top: 24px;/*ずらす*/
+  left: -18px;/*ずらす*/
+  width: 70px;/*グラデーションカバーの幅*/
+  height: 70px;/*グラデーションカバーの高さ*/
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+}
+
+.fa-instagram {/*アイコン*/
+  color: #FFF;/*白に*/
+  position: relative;/*z-indexを使うため*/
+  z-index: 2;/*グラデーションより前に*/
+  font-size: 45px;/*アイコンサイズ*/
+  top: 6px;/*上下にずらす*/
+  left: 0.5px;/*左右にずらす*/
 }
