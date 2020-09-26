@@ -5,7 +5,7 @@ class Task < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to_active_hash :priority
 
-  #プルダウンの選択が「--」(id:1)の時は保存できないようにする
+  # プルダウンの選択が「--」(id:1)の時は保存できないようにする
   with_options numericality: { other_than: 1 } do
     validates :category_id
     validates :priority_id

@@ -7,7 +7,7 @@ class TasksController < ApplicationController
 
   def index
     # タスク一覧表示させる(新規投稿順に並ぶように記述)
-    @tasks = Task.where(user_id: current_user.id).order("created_at DESC")
+    @tasks = Task.where(user_id: current_user.id).order('created_at DESC')
   end
 
   def new
@@ -46,6 +46,7 @@ class TasksController < ApplicationController
 
   # Classの外部から呼ばれたら困るメソッドを隔離、可読性向上
   private
+
   # 指定したキーを持つパラメーターのみを受け取るように制限する
   def task_params
     params.require(:task).permit(
