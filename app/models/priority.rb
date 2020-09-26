@@ -7,4 +7,4 @@ class Priority < ActiveHash::Base
     { id: 4, name: '重要度が高く、緊急度は低い' },
     { id: 5, name: '重要度は低く、緊急度も低い' }
   ]
-  end
+end
