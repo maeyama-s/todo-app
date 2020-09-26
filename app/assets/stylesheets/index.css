@@ -12,9 +12,11 @@
   display: block;
   max-width: 800px;
   margin-bottom: 1%;
-  overflow: scroll; /* 入りきらない文字列はスクロール */
-  white-space: nowrap;　/* 文字の折り返しを禁止 */
+  overflow: scroll;
+  white-space: nowrap;
 }
+/* 入りきらない文字列はスクロール */
+/* 文字の折り返しを禁止 */
 
 .task:hover {
   box-shadow: 1px 1px 1px 3px rgba(41, 41, 41, 0.4);;
