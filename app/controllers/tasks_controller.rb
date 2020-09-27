@@ -49,11 +49,11 @@ class TasksController < ApplicationController
 
   def repeat
     task = Task.find(params[:id])
-    task = Task.new(
+    task = Task.create(
                     user_id: task.user_id, title: task.title, details: task.details, deadline: task.deadline + 1,
                     category_id: task.category_id, priority_id: task.priority_id
                   )
-    task.save
+    redirect_to tasks_path
   end
 
   # Classの外部から呼ばれたら困るメソッドを隔離、可読性向上
