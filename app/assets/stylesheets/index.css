@@ -22,7 +22,7 @@
   transition: 0.5s ;
 }
 
-.fa-check-circle {
+.fa-check-circle, .fa-redo-alt {
   margin-right: 20px;
   color: #333333;
 }
