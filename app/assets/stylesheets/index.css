@@ -25,4 +25,17 @@
 
 .fa-check-circle {
   margin-right: 20px;
+  color: #333333;
+}
+
+.today {
+  color: blue;
+}
+
+.expired {
+  color: red;
+}
+
+.far-away {
+  color: #333333;
 }

@@ -5,7 +5,13 @@
       <%= link_to "/tasks/#{task.id}", method: :delete do %>
           <i class="far fa-check-circle fa-lg"></i>
       <% end %>
-      <%= link_to task.title, task_path(task.id) %>
+      <% if task.deadline == Date.today %>
+          <%= link_to(task.title, task_path(task.id), {class: "today"}) %>
+      <% elsif task.deadline < Date.today %>
+          <%= link_to(task.title, task_path(task.id), {class: "expired"}) %>
+      <% else %>
+          <%= link_to(task.title, task_path(task.id), {class: "far-away"}) %>
+      <% end %>
     </p>
   </div>
   <% end %>
