@@ -39,3 +39,7 @@
 .far-away {
   color: #333333;
 }
+
+.today-comment, .far-away-comment {
+  margin-top: 50px;
+}

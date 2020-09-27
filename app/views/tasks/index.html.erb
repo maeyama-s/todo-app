@@ -1,17 +1,40 @@
 <div class="tasks">
-  <% @tasks.each do |task| %>
+  <% if @expired != [] %>
+  <div class="expired-comment">期限超過</div>
+  <% end %>
+  <% @expired.each do |task| %>
   <div class="task">
     <p>
       <%= link_to "/tasks/#{task.id}", method: :delete do %>
           <i class="far fa-check-circle fa-lg"></i>
       <% end %>
-      <% if task.deadline == Date.today %>
-          <%= link_to(task.title, task_path(task.id), {class: "today"}) %>
-      <% elsif task.deadline < Date.today %>
-          <%= link_to(task.title, task_path(task.id), {class: "expired"}) %>
-      <% else %>
-          <%= link_to(task.title, task_path(task.id), {class: "far-away"}) %>
+      <%= link_to(task.title, task_path(task.id), {class: "expired"}) %>
+    </p>
+  </div>
+  <% end %>
+  <% if @today != [] %>
+    <div class="today-comment">今日</div>
+  <% end %>
+  <% @today.each do |task| %>
+  <div class="task">
+    <p>
+      <%= link_to "/tasks/#{task.id}", method: :delete do %>
+          <i class="far fa-check-circle fa-lg"></i>
       <% end %>
+      <%= link_to(task.title, task_path(task.id), {class: "today"}) %>
+    </p>
+  </div>
+  <% end %>
+  <% if @far_away != [] %>
+  <div class="far-away-comment">明日以降</div>
+  <% end %>
+  <% @far_away.each do |task| %>
+  <div class="task">
+    <p>
+      <%= link_to "/tasks/#{task.id}", method: :delete do %>
+          <i class="far fa-check-circle fa-lg"></i>
+      <% end %>
+      <%= link_to(task.title, task_path(task.id), {class: "far-away"}) %>
     </p>
   </div>
   <% end %>
