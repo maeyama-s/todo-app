@@ -1,6 +1,5 @@
 .tasks {
   margin: 150px auto 50px auto;
-  height: 1360px;
   width: 900px;
   background-size: cover;
   padding: 50px;
@@ -25,4 +24,21 @@
 
 .fa-check-circle {
   margin-right: 20px;
+  color: #333333;
+}
+
+.today {
+  color: blue;
+}
+
+.expired {
+  color: red;
+}
+
+.far-away {
+  color: #333333;
+}
+
+.today-comment, .far-away-comment {
+  margin-top: 50px;
 }

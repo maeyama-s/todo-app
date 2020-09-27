@@ -6,8 +6,11 @@ class TasksController < ApplicationController
   end
 
   def index
-    # タスク一覧表示させる(新規投稿順に並ぶように記述)
-    @tasks = Task.where(user_id: current_user.id).order('created_at DESC')
+    # タスク一覧表示させる(期限順に並ぶように記述)
+    @tasks = Task.where(user_id: current_user.id).order('deadline ASC')
+    @today = @tasks.where(deadline: Date.today)
+    @expired = @tasks.where('deadline < ?', Date.today)
+    @far_away = @tasks.where('deadline > ?', Date.today)
   end
 
   def new
