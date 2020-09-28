@@ -27,6 +27,12 @@ class TasksController < ApplicationController
     end
   end
 
+  # JSでタスク作成
+  def create_task
+    task = Task.create(title: params[:title])
+    render json:{task: task}
+  end
+
   def show
     @task = Task.find(params[:id])
   end
