@@ -1,4 +1,32 @@
+<div class="new_con">
+  <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
+  <%= form_with(url: "tasks/create", model: @task, method: :post, local: true, id: "form") do |form| %>
+  <%# getElementByIdを用いてtitleに入力された情報を取得、リセットするため、id: を追加 %>
+    <%= form.text_field :title, placeholder: "title", id: "title" %>
+    <%# getElementByIdを用いてsubmitボタンの情報を取得するため、id: を追加 %>
+    <%= form.submit "タスク作成", id: "submit" %>
+  <% end %>
+</div>
+
+<%# 作成後にタスクを追加する要素 %>
+<div id="task-list"></div>
+
+
+
 <div class="tasks">
+  <% if @no_deadline != [] %>
+    <div class="no-deadline-comment">期限なし</div>
+  <% end %>
+  <% @no_deadline.each do |task| %>
+    <div class="task">
+      <p>
+        <%= link_to "/tasks/#{task.id}", method: :delete do %>
+          <i class="far fa-check-circle fa-lg"></i>
+        <% end %>
+        <%= link_to(task.title, task_path(task.id), {class: "no-deadline"}) %>
+      </p>
+    </div>
+  <% end %>
   <% if @expired != [] %>
   <div class="expired-comment">期限超過</div>
   <% end %>

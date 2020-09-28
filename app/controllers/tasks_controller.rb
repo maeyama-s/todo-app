@@ -11,6 +11,9 @@ class TasksController < ApplicationController
     @today = @tasks.where(deadline: Date.today)
     @expired = @tasks.where('deadline < ?', Date.today)
     @far_away = @tasks.where('deadline > ?', Date.today)
+    @no_deadline = @tasks.where(deadline: nil)
+    # form_withに渡す引数（空のインスタンスをform_withで利用する）
+    @task = Task.new
   end
 
   def new
@@ -25,6 +28,12 @@ class TasksController < ApplicationController
     else
       render :new
     end
+  end
+
+  # JSでタスク作成
+  def create_task
+    @task = Task.create(create_task_params)
+    render json:{task: @task}
   end
 
   def show
@@ -64,5 +73,9 @@ class TasksController < ApplicationController
     params.require(:task).permit(
       :title, :details, :deadline, :category_id, :priority_id
     ).merge(user_id: current_user.id)
+  end
+
+  def create_task_params
+    params.require(:task).permit(:title).merge(user_id: current_user.id)
   end
 end

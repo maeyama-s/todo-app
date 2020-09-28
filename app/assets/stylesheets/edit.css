@@ -24,7 +24,7 @@ form input {
 
 form input[type="submit"] {
   background-color: #a4cf67;
-  border-radius: 20px;
+  border-radius: 5px;
   color: #fff;
   border: 0;
   font-size: 18px;

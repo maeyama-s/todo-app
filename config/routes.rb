@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "tasks#top"
   resources :tasks
   post 'tasks/:id/repeat', to: 'tasks#repeat'
+  post 'tasks/create', to: 'tasks#create_task'
 end

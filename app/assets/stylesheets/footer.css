@@ -17,10 +17,10 @@
 }
 
 .icons {
-  margin: 30px 0 30px 60px;
+  margin: 30px 0;
 }
 
-.fa-3x {
+.fb-blue, .tw-blue {
   margin-left: 20px;
 }
 
@@ -34,14 +34,4 @@
 
 .tw-blue {
   color: #1da1f2;
-}
-
-.instagram {
-  display: inline-block;
-  background-image: url(instagram.jpg);
-  background-size: cover;
-  height: 45px;
-  width: 45px;
-  position: absolute;
-  left: 590px;
 }
