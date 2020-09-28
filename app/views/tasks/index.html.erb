@@ -1,6 +1,6 @@
 <div class="new_con">
   <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
-  <%= form_with(url: "tasks/create", method: :post, local: true, id: "form") do |form| %>
+  <%= form_with(url: "tasks/create", model: @task, method: :post, local: true, id: "form") do |form| %>
   <%# getElementByIdを用いてtitleに入力された情報を取得、リセットするため、id: を追加 %>
     <%= form.text_field :title, placeholder: "title", id: "title" %>
     <%# getElementByIdを用いてsubmitボタンの情報を取得するため、id: を追加 %>

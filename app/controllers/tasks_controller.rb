@@ -31,8 +31,8 @@ class TasksController < ApplicationController
 
   # JSでタスク作成
   def create_task
-    task = Task.create(title: params[:title])
-    render json:{task: task}
+    @task = Task.create(create_task_params)
+    render json:{task: @task}
   end
 
   def show
@@ -72,5 +72,9 @@ class TasksController < ApplicationController
     params.require(:task).permit(
       :title, :details, :deadline, :category_id, :priority_id
     ).merge(user_id: current_user.id)
+  end
+
+  def create_task_params
+    params.require(:task).permit(:title).merge(user_id: current_user.id)
   end
 end
