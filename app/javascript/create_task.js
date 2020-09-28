@@ -33,7 +33,7 @@ function task(){
       const HTML = `
         <div class="task" data-id=${item.id}>
           <div class="task-content">
-          ${item.title}
+            ${item.title}
           </div>
         </div>`;
       // listという要素に対して、insertAdjacentHTMLでHTMLを追加。第一引数にafterendを指定することで、要素listの直後に挿入。
