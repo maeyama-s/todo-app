@@ -11,6 +11,8 @@ class TasksController < ApplicationController
     @today = @tasks.where(deadline: Date.today)
     @expired = @tasks.where('deadline < ?', Date.today)
     @far_away = @tasks.where('deadline > ?', Date.today)
+    # form_withに渡す引数（空のインスタンスをform_withで利用する）
+    @task = Task.new
   end
 
   def new
