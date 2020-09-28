@@ -35,8 +35,8 @@ Things you may want to cover:
 | title       | string     | null: false       |
 | details     | text       |                   |
 | deadline    | date       |                   |
-| category_id | integer    | null: false       |
-| priority_id | integer    | null: false       |
+| category_id | integer    |                   |
+| priority_id | integer    |                   |
 
 ### Association
 
