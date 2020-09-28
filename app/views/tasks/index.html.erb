@@ -23,9 +23,6 @@
         <%= link_to "/tasks/#{task.id}", method: :delete do %>
           <i class="far fa-check-circle fa-lg"></i>
         <% end %>
-        <%= link_to "/tasks/#{task.id}/repeat", method: :post do %>
-          <i class="fas fa-redo-alt fa-lg"></i>
-        <% end %>
         <%= link_to(task.title, task_path(task.id), {class: "no-deadline"}) %>
       </p>
     </div>
