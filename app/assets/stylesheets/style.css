@@ -27,39 +27,42 @@ body {
   color: #333333;
   font-family: 'Neucha', cursive;
 }
-/* 共通 */
 
-/* devise */
-.devise_con {
-  width: 100%;
-  margin: 200px auto 100px auto;
-  max-width: 600px;
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
-  background-color: white;
-  border-radius: 30px;
-}
-
-.devise_con h2 {
-  font-weight: normal;
-  margin-bottom: 20px;
-  cursor: default;
-}
-
-form input {
+form input, textarea {
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
-  border: 1px solid #D8D8D8;
+  border: 1px solid #bdbdbd;
   border-radius: 5px;
 }
 
 form input[type="submit"] {
-  background-color: #a4cf67;
+  background-color: #b1b1b1;
   border-radius: 5px;
   color: #fff;
-  border: 0;
   font-size: 18px;
+  /* デフォルトのArialが適用されていたため、上書き。 */
+  font-family: 'Neucha', cursive;
+  /* デフォルトのnormalが適用されていたため、上書き。 */
+  letter-spacing: 0.25em;
+  /* ボタンにカーソルを合わせた時、カーソルが変わるように。devise共通の上書き。 */
+  cursor: pointer;
+}
+/* 共通 */
+
+/* devise */
+.devise_con {
+  margin: 200px auto 100px auto;
+  max-width: 600px;
+  padding: 50px;
+  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
+  border-radius: 30px;
+  /* 項目名にカーソルを合わせた時、カーソルが変わらないように。 */
+  cursor: default;
+}
+
+.devise_con h2 {
+  margin-bottom: 20px;
 }
 /* devise */
 
@@ -78,22 +81,6 @@ form input[type="submit"] {
   font-weight: normal;
   margin-bottom: 20px;
   cursor: default;
-}
-
-form input {
-  width: 100%;
-  margin: 5px 0 15px;
-  padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
-}
-
-form input[type="submit"] {
-  background-color: #a4cf67;
-  border-radius: 5px;
-  color: #fff;
-  border: 0;
-  font-size: 18px;
 }
 /* edit */
 
@@ -275,28 +262,12 @@ a {
   cursor: default;
 }
 
-form input, textarea {
-  width: 100%;
-  margin: 5px 0 15px;
-  padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
-}
-
 select {
   width: 32%;
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
-}
-
-form input[type="submit"] {
-  background-color: #a4cf67;
-  border-radius: 5px;
-  color: #fff;
-  border: 0;
-  font-size: 18px;
 }
 /* new */
 
