@@ -21,11 +21,10 @@ ul,li {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, body {
+body {
   /* テキストの時間のスペース */
-  letter-spacing: 0.15em;
-  font-size: 16px;
-  color: #666;
+  letter-spacing: 0.25em;
+  color: #333333;
   font-family: 'Neucha', cursive;
 }
 /* 共通 */
@@ -333,7 +332,6 @@ form input[type="submit"] {
 .todo {
   font-size: 100px;
   text-align: center;
-  font-family: 'Neucha', cursive;
   padding-top: 150px;
 }
 
@@ -363,12 +361,14 @@ form input[type="submit"] {
 }
 
 .top-content h1 {
+  /* 共通で設定しているが値を大きくしたいから上書き */
   letter-spacing: 10px;
   font-size: 30px;
 }
 
 .top-content p {
-  letter-spacing: 5px;
+  /* 共通で設定しているが値を大きくしたいから上書き */
+  letter-spacing: 10px;
   margin-bottom: 50px;
 }
 
