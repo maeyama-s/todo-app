@@ -63,6 +63,10 @@ form input[type="submit"] {
 .devise_con h2, .edit-container h3 {
   margin-bottom: 20px;
 }
+
+a {
+  text-decoration: none;
+}
 /* 共通 */
 
 /* devise */
@@ -109,36 +113,35 @@ form input[type="submit"] {
 
 /* header */
 .header_con {
+  /* Font Awesomeのアイコンサイズ */
   font-size: 16px;
   width: 90vw;
-  padding: 35px 10vw;
+  padding: 30px 10vw;
   border-bottom: 1px solid #333;
   /* 指定された要素の子要素が横並びになる */
   display: flex;
   justify-content: space-between;
+  /* fixedで固定しているから透明ではいけない */
   background-color: white;
-  height: 100px;
+  /* 指定位置に固定 */
   position: fixed;
   top: 0;
   left: 5vw;
+  /* 他のものより上に表示させる */
   z-index: 1;
 }
 
 .lists-left {
-  display: inline-block;
   display: flex;
 }
 
-.top {
-  margin-right: 30px;
-}
-
 .fa-home, .fa-calendar-alt, .fa-calendar-plus, .fa-user-circle {
+  /* ログアウト画像（Font Awesomeにアイコンなかった）に色を合わせる */
   color: rgb(73, 73, 73);
 }
 
 .fa-home {
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .lists-right {
@@ -148,11 +151,7 @@ form input[type="submit"] {
 }
 
 .lists-right li {
-  margin: 0 0 0 3vw;
-}
-
-a {
-  text-decoration: none;
+  margin-right: 40px;
 }
 
 .login-icon {
