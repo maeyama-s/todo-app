@@ -1,6 +1,6 @@
 
-  <div class="new_con">
-    <h3>タスクを作成する</h3>
+  <div class="new-container">
+    <h2>Create a task</h2>
     <%= form_with(model: @task, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "title" %>
       <%= form.text_area :details, placeholder: "details" %>
