@@ -1,18 +1,3 @@
-<div class="new_con">
-  <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
-  <%= form_with(url: "tasks/create", model: @task, method: :post, local: true, id: "form") do |form| %>
-  <%# getElementByIdを用いてtitleに入力された情報を取得、リセットするため、id: を追加 %>
-    <%= form.text_field :title, placeholder: "title", id: "title" %>
-    <%# getElementByIdを用いてsubmitボタンの情報を取得するため、id: を追加 %>
-    <%= form.submit "タスク作成", id: "submit" %>
-  <% end %>
-</div>
-
-<%# 作成後にタスクを追加する要素 %>
-<div id="task-list"></div>
-
-
-
 <div class="tasks">
   <% if @no_deadline != [] %>
     <div class="no-deadline-comment">期限なし</div>
@@ -76,3 +61,16 @@
   </div>
   <% end %>
 </div>
+
+<div class="new-title">
+  <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
+  <%= form_with(url: "tasks/create", model: @task, method: :post, local: true, id: "form") do |form| %>
+  <%# getElementByIdを用いてtitleに入力された情報を取得、リセットするため、id: を追加 %>
+    <%= form.text_field :title, placeholder: "title", id: "title" %>
+    <%# getElementByIdを用いてsubmitボタンの情報を取得するため、id: を追加 %>
+    <%= form.submit "タスク作成", id: "submit" %>
+  <% end %>
+</div>
+
+<%# 作成後にタスクを追加する要素 %>
+<div id="task-list"></div>
