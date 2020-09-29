@@ -1,6 +1,6 @@
 
   <div class="edit-container">
-    <h3>編集する</h3>
+    <h2>To edit</h2>
     <%= form_with(model: @task, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "title" %>
       <%= form.text_area :details, placeholder: "details" %>
