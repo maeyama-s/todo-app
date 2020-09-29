@@ -1,11 +1,20 @@
 <div class="show_con">
-  <ul class="show_list">
-    <li>タイトル：<%= @task.title %></li>
-    <li>詳細：<%= @task.details %></li>
-    <li>期限：<%= @task.deadline %></li>
-    <li>カテゴリー：<%= @task.category.name %></li>
-    <li>優先度：<%= @task.priority.name %></li>
-  </ul>
-  <%= link_to '編集', edit_task_path(@task.id), method: :get %>
-  <%= link_to '削除', "/tasks/#{@task.id}", method: :delete %>
+  <div><strong>タイトル</strong></div>
+  <div class="task-contents"><%= @task.title %></div>
+  <div><strong>詳細</strong></div>
+  <div class="task-contents"><%= @task.details %></div>
+  <div><strong>期限</strong></div>
+  <div class="task-contents"><%= @task.deadline %></div>
+  <div><strong>カテゴリー</strong></div>
+  <div class="task-contents"><%= @task.category.name %></div>
+  <div><strong>優先度</strong></div>
+  <div class="task-contents"><%= @task.priority.name %></div>
+  <div class="show-icons">
+  <%= link_to edit_task_path(@task.id), method: :get do %>
+    <i class="fas fa-edit fa-fw fa-lg"></i>
+  <% end %>
+  <%= link_to "/tasks/#{@task.id}", method: :delete do %>
+    <i class="fas fa-trash-alt fa-fw fa-lg"></i>
+  <% end %>
+  </div>
 </div>

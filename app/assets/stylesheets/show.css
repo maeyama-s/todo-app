@@ -1,12 +1,25 @@
 .show_con {
-  margin: 150px auto 50px auto;
-  height: 1360px;
-  width: 900px;
-  background-image: url(task-4.jpg);
-  background-size: cover;
-  padding: 50px;
+  width: 100%;
+  margin: 200px auto 100px auto;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
+  background-color: white;
+  border-radius: 30px;
 }
 
-.show_list {
-  list-style: none;
+.task-contents {
+  padding: 0 0 10px 20px;
+  /* 改行するコード。英語なら単語ごとに区切って表示、日本語は範囲に合わせて区切るオプション。 */
+  word-break: normal;
+}
+
+.show-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-edit, .fa-trash-alt {
+  color: #333333;
+  margin-right: 20px;
 }
