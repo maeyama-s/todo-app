@@ -21,6 +21,16 @@ ul, li {
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
+.error-message, .login-flash-message {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 body {
   /* テキストの時間のスペース */
   letter-spacing: 0.25em;
@@ -197,7 +207,7 @@ select {
 
 /* index */
 .tasks {
-  margin: 150px auto 50px auto;
+  margin: 0 auto 50px auto;
   width: 900px;
   padding: 50px;
 }
@@ -240,12 +250,16 @@ select {
   color: #333333;
 }
 
+.no-deadline-comment {
+  margin-bottom: 10px;
+}
+
 .expired-comment, .today-comment, .far-away-comment {
-  margin-top: 50px;
+  margin: 50px 0 10px 0;
 }
 
 .new-title {
-  margin: 100px auto;
+  margin: 150px auto 0 auto;
   max-width: 600px;
   padding: 30px;
   border-radius: 30px;

@@ -2,6 +2,9 @@
   <div class="new-container">
     <h2>Create a task</h2>
     <%= form_with(model: @task, local: true) do |form| %>
+
+      <%= render 'shared/error_messages', model: form.object %>
+
       <%= form.text_field :title, placeholder: "title" %>
       <%= form.text_area :details, placeholder: "details" %>
       <%= form.date_select :deadline, placeholder: "deadline" %>

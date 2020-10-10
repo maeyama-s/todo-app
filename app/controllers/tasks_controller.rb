@@ -6,12 +6,12 @@ class TasksController < ApplicationController
   end
 
   def index
-    # タスク一覧表示させる(期限順に並ぶように記述)
-    @tasks = Task.where(user_id: current_user.id).order('deadline ASC')
-    @today = @tasks.where(deadline: Date.today)
-    @expired = @tasks.where('deadline < ?', Date.today)
-    @far_away = @tasks.where('deadline > ?', Date.today)
-    @no_deadline = @tasks.where(deadline: nil)
+    # タスク一覧表示させる
+    @tasks = Task.where(user_id: current_user.id)
+    @today = @tasks.where(deadline: Date.today).order('created_at DESC')
+    @expired = @tasks.where('deadline < ?', Date.today).order('created_at DESC')
+    @far_away = @tasks.where('deadline > ?', Date.today).order('created_at DESC')
+    @no_deadline = @tasks.where(deadline: nil).order('created_at DESC')
     # form_withに渡す引数（空のインスタンスをform_withで利用する）
     @task = Task.new
   end
@@ -41,13 +41,17 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    # エラーメッセージ表示の際、エラーが出るため@taskを用意する必要がある。
+    @task = Task.new
   end
 
   def update
     task = Task.find(params[:id])
-    task.update(task_params)
-    redirect_to tasks_path
+    if task.update(task_params)
+      redirect_to tasks_path
+    else
+      render :edit
+    end
   end
 
   def destroy

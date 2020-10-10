@@ -6,9 +6,21 @@
   <div><strong>期限</strong></div>
   <div class="task-contents"><%= @task.deadline %></div>
   <div><strong>カテゴリー</strong></div>
-  <div class="task-contents"><%= @task.category.name %></div>
+  <%# ActiveHashを使って作成したモデルに対してアソシエーションを組んでいるため、データがないとビューでエラーが出る。 %>
+  <% if @task.category %>
+    <div class="task-contents"><%= @task.category.name %></div>
+  <% else %>
+    <%# 空白の場合、詳細・期限と同じレイアウトにするため。 %>
+    <div class="task-contents"></div>
+  <% end %>
   <div><strong>優先度</strong></div>
-  <div class="task-contents"><%= @task.priority.name %></div>
+  <%# ActiveHashを使って作成したモデルに対してアソシエーションを組んでいるため、データがないとビューでエラーが出る。 %>
+  <% if  @task.priority %>
+    <div class="task-contents"><%= @task.priority.name %></div>
+  <% else %>
+    <%# 空白の場合、詳細・期限と同じレイアウトにするため。 %>
+    <div class="task-contents"></div>
+  <% end %>
   <div class="show-icons">
   <%= link_to edit_task_path(@task.id), method: :get do %>
     <i class="fas fa-edit fa-fw fa-lg"></i>

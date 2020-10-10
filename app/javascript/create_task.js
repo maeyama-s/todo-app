@@ -31,13 +31,16 @@ function task(){
       const formText = document.getElementById("title");
       // 「タスクとして描画する部分のHTML」を定義。HTMLという変数を描画するような処理を行えば、ここで定義したHTMLが描画される。
       const HTML = `
-        <div class="task" data-id=${item.id}>
-          <div class="task-content">
-            ${item.title}
+        <div data-id=${item.id}>
+          <div class="task", id="task-list">
+            <p>
+              <a href="/tasks/${item.id}", data-method="delete"><i class="far fa-check-circle fa-lg"></i></a>
+              <a href="/tasks/${item.id}", class: "no-deadline"><font color="green">${item.title}</a>
+            </p>
           </div>
         </div>`;
-      // listという要素に対して、insertAdjacentHTMLでHTMLを追加。第一引数にafterendを指定することで、要素listの直後に挿入。
-      list.insertAdjacentHTML("afterend", HTML);
+      // listという要素に対して、insertAdjacentHTMLでHTMLを追加。第一引数に場所を指定する。
+      list.insertAdjacentHTML("beforebegin", HTML);
       // 「タスクの入力フォームに入力されたままの文字」はリセットされる。正確には、空の文字列に上書きされるような仕組み。
       formText.value = "";
     };
