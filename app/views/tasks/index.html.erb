@@ -1,3 +1,4 @@
+
 <div class="new-title">
   <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
   <%= form_with(url: "tasks/create", model: @task, method: :post, local: true, id: "form") do |form| %>
@@ -7,6 +8,10 @@
     <%= form.submit "Create a task", id: "submit" %>
   <% end %>
 </div>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
 
 <div class="tasks">
   <% if @no_deadline != [] %>
