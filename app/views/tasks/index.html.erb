@@ -12,8 +12,9 @@
   <% if @no_deadline != [] %>
     <div class="no-deadline-comment">期限なし</div>
   <% end %>
+  <div id="task-list"></div><%# 作成後にタスクを追加する要素 %>
   <% @no_deadline.each do |task| %>
-    <div class="task", id="task-list"><%# 作成後にタスクを追加する要素 %>
+    <div class="task">
       <p>
         <%= link_to "/tasks/#{task.id}", method: :delete do %>
           <i class="far fa-check-circle fa-lg"></i>
