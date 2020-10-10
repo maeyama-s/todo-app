@@ -3,7 +3,9 @@
     <h2>To edit</h2>
     <%= form_with(model: @task, local: true) do |form| %>
 
-      <%= render 'shared/error_messages', model: form.object %>
+      <% if @error %>
+        <div class="error-message" ><%= @error %></div>
+      <% end %>
 
       <%= form.text_field :title, placeholder: "title" %>
       <%= form.text_area :details, placeholder: "details" %>

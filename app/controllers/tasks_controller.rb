@@ -41,15 +41,15 @@ class TasksController < ApplicationController
   end
 
   def edit
-    # エラーメッセージ表示の際、エラーが出るため@taskを用意する必要がある。
-    @task = Task.new
+    @task = Task.find(params[:id])
   end
 
   def update
-    task = Task.find(params[:id])
-    if task.update(task_params)
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
       redirect_to tasks_path
     else
+      @error = "タイトルを入力してください"
       render :edit
     end
   end

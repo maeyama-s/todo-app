@@ -68,3 +68,6 @@ gem 'pry-rails'
 
 # データベースへ保存せずにデータを取り扱うことができるGem
 gem 'active_hash'
+
+# 日本語を使えるようになる（エラーメッセージ）
+gem 'rails-i18n'
