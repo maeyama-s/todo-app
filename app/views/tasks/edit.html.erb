@@ -7,8 +7,8 @@
         <div class="error-message" ><%= @error %></div>
       <% end %>
 
-      <%= form.text_field :title, placeholder: "title" %>
-      <%= form.text_area :details, placeholder: "details" %>
+      <%= form.text_field :title, placeholder: "タイトル" %>
+      <%= form.text_area :details, placeholder: "詳細" %>
       <%= form.date_select :deadline, placeholder: "deadline" %>
       <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"task-category"}) %>
       <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>

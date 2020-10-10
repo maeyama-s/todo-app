@@ -2,7 +2,7 @@
   <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
   <%= form_with(url: "tasks/create", model: @task, method: :post, local: true, id: "form") do |form| %>
   <%# getElementByIdを用いてtitleに入力された情報を取得、リセットするため、id: を追加 %>
-    <%= form.text_field :title, placeholder: "title", id: "title" %>
+    <%= form.text_field :title, placeholder: "タイトル", id: "title" %>
     <%# getElementByIdを用いてsubmitボタンの情報を取得するため、id: を追加 %>
     <%= form.submit "Create a task", id: "submit" %>
   <% end %>
