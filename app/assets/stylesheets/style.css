@@ -66,14 +66,14 @@ form input[type="submit"]:hover {
   margin: 200px auto 100px auto;
   max-width: 600px;
   padding: 50px;
-  border: 1px solid rgb(83, 83, 83);
+  border: 1px solid rgb(133, 133, 133);
   border-radius: 30px;
   /* 項目名にカーソルを合わせた時、カーソルが変わらないように。 */
   cursor: default;
 }
 
 .devise-container:hover, .edit-container:hover, .new-container:hover, .show-container:hover {
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.4);
+  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
   /* 変化するまでの時間を設定 */
   transition: 0.5s;
 }
@@ -226,7 +226,7 @@ select {
   max-width: 600px;
   padding: 30px;
   border-radius: 30px;
-  border: 1px solid rgb(180, 180, 180);
+  border: 1px solid rgb(133, 133, 133);
 }
 
 .new-title:hover {

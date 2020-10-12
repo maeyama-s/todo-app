@@ -9,8 +9,8 @@
       <%= form.text_field :title, placeholder: "タイトル" %>
       <%= form.text_area :details, placeholder: "詳細" %>
       <%= form.date_select :deadline, use_month_numbers: true %>
-      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"task-category"}) %>
-      <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {include_blank: 'カテゴリー選択'}, {class:"select-box", id:"task-category"}) %>
+      <%= form.collection_select(:priority_id, Priority.all, :id, :name, {include_blank: '優先度選択'}, {class:"select-box", id:"task-priority"}) %>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
