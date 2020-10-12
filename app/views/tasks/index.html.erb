@@ -1,3 +1,4 @@
+<%= render "shared/header" %>
 
 <div class="new-title">
   <%# getElementByIdを用いてフォームに入力された情報を取得するため、id: を追加 %>
@@ -8,10 +9,6 @@
     <%= form.submit "Create a task", id: "submit" %>
   <% end %>
 </div>
-
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
-<% end %>
 
 <div class="tasks">
   <% if @no_deadline != [] %>
@@ -77,3 +74,5 @@
   </div>
   <% end %>
 </div>
+
+<%= render "shared/footer" %>

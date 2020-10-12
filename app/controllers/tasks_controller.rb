@@ -58,7 +58,6 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.destroy
     redirect_to tasks_path
-    flash[:notice] = "タスクを削除しました"
   end
 
   def repeat
