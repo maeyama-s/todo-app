@@ -88,7 +88,7 @@ a {
 }
 
 select {
-  width: 32%;
+  width: 49%;
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
@@ -263,6 +263,14 @@ select {
 /* index */
 
 /* new */
+.select-date {
+  display: flex;
+  align-items: center;
+}
+
+.select-date p {
+  margin:0 10px 0 5px;
+}
 /* new */
 
 /* show */
