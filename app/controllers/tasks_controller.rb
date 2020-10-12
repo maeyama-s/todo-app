@@ -33,7 +33,7 @@ class TasksController < ApplicationController
   # JSでタスク作成
   def create_task
     @task = Task.create(create_task_params)
-    render json:{task: @task}
+    render json: { task: @task }
   end
 
   def show
@@ -49,7 +49,7 @@ class TasksController < ApplicationController
     if @task.update(task_params)
       redirect_to tasks_path
     else
-      @error = "タイトルを入力してください"
+      @error = 'タイトルを入力してください'
       render :edit
     end
   end
@@ -62,10 +62,10 @@ class TasksController < ApplicationController
 
   def repeat
     task = Task.find(params[:id])
-    task = Task.create(
-                    user_id: task.user_id, title: task.title, details: task.details, deadline: task.deadline + 1,
-                    category_id: task.category_id, priority_id: task.priority_id
-                  )
+    Task.create(
+      user_id: task.user_id, title: task.title, details: task.details, deadline: task.deadline + 1,
+      category_id: task.category_id, priority_id: task.priority_id
+    )
     redirect_to tasks_path
   end
 
