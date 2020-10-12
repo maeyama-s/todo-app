@@ -34,7 +34,7 @@ ul {
 body {
   /* テキストの時間のスペース */
   letter-spacing: 0.25em;
-  color: #333333;
+  color: rgb(95, 95, 95);
 }
 
 form input, textarea {
@@ -46,7 +46,7 @@ form input, textarea {
 }
 
 form input[type="submit"] {
-  background-color: #b1b1b1;
+  background-color:rgb(255, 189, 68);
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
@@ -57,7 +57,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: rgb(97, 97, 97);
+  background-color:rgb(255, 166, 0);
   /* 変化するまでの時間を設定 */
   transition: 0.5s;
 }
@@ -66,14 +66,14 @@ form input[type="submit"]:hover {
   margin: 200px auto 100px auto;
   max-width: 600px;
   padding: 50px;
-  border: 1px solid rgb(180, 180, 180);
+  border: 1px solid rgb(83, 83, 83);
   border-radius: 30px;
   /* 項目名にカーソルを合わせた時、カーソルが変わらないように。 */
   cursor: default;
 }
 
 .devise-container:hover, .edit-container:hover, .new-container:hover, .show-container:hover {
-  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.4);
   /* 変化するまでの時間を設定 */
   transition: 0.5s;
 }
