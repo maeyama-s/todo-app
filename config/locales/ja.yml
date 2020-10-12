@@ -3,3 +3,5 @@ ja:
     attributes:
       task:
         title: タイトル
+      user:
+        nickname: ニックネーム

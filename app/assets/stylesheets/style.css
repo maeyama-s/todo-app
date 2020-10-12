@@ -63,7 +63,7 @@ form input[type="submit"]:hover {
 }
 
 .devise-container, .edit-container, .new-container, .show-container {
-  margin: 200px auto 100px auto;
+  margin: 150px auto 50px auto;
   max-width: 600px;
   padding: 50px;
   border: 1px solid rgb(133, 133, 133);
@@ -84,6 +84,7 @@ form input[type="submit"]:hover {
 
 a {
   text-decoration: none;
+  color: rgb(83, 83, 83);
 }
 
 select {
@@ -96,6 +97,31 @@ select {
 /* 共通 */
 
 /* devise */
+.back-top, .back-sign-up {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.devise-container-login, .devise-container-sign-up {
+  margin: 50px auto 50px auto;
+  max-width: 600px;
+  padding: 50px;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 30px;
+  /* 項目名にカーソルを合わせた時、カーソルが変わらないように。 */
+  cursor: default;
+}
+
+.devise-container-login:hover, .devise-container-sign-up:hover {
+  box-shadow: 0 0 20px rgba(41, 41, 41, 0.4);
+  /* 変化するまでの時間を設定 */
+  transition: 0.5s;
+}
+
+.sign-up-h2 {
+  margin-bottom: 10px;
+}
 /* devise */
 
 /* edit */
@@ -349,7 +375,7 @@ select {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: 'Francois One', sans-serif;
+  font-family: 'Acme', sans-serif;
 }
 
 .top-about-4 {
@@ -358,7 +384,7 @@ select {
   position: absolute;
   top: 2000px;
   left: 0;
-  font-family: 'Francois One', sans-serif;
+  font-family: 'Acme', sans-serif;
 }
 
 .top-about-3-1 {
