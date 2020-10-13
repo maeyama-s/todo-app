@@ -633,6 +633,10 @@ select {
     color: rgb(95, 95, 95);
   }
 
+  .top-3-text span {
+    float: none;
+  }
+
   .none-599 {
     display: none;
   }
