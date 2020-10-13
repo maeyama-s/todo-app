@@ -1,77 +1,70 @@
-<div class="top-about">
-
-  <div class="top-about-3">
-    <div class="top-about-3-1">
-      <div class="top-about-3-1-1">
+<div class="top-page">
+  <div class="top-1">
+    <%= image_tag "top-1.jpg", class:"top-1-img" %>
+    <div class="top-1-text">
+      <div class="top-1-h1">
         <h1>ToDo App</h1>
       </div>
-      <div class="top-about-3-1-2">
+      <div class="top-1-link">
         <%= link_to "ログイン", new_user_session_path, class: "top-login" %>
         <%= link_to "新規登録", new_user_registration_path, class: "top-sign-up" %>
       </div>
     </div>
-    <div class="top-about-3-2">
+    <div class="top-1-square">
     </div>
   </div>
 
-  <div class="top-about-1">
-    <div class="top-about-1-1"></div>
-    <div class="top-about-1-2"></div>
-    <div class="top-about-1-3">
+  <div class="top-2">
+    <div class="top-2-square"></div>
+    <%= image_tag "top-2.jpg", class:"top-2-img" %>
+    <div class="top-2-text">
       <p>What is a ToDo list</p>
       <h1>ToDoリストとは</h1>
       <p>
         やるべき事をリストアップしたもの。<br><br>
-        やるべきことを顕在化させることで、<br>
-        今自分が何をすべきなのかということが<br>
-        明確になり、集中して業務に取り組める<br>
-        ようになります。<br><br>
-        todoリストを活用することで、<br>
-        作業効率が上がるなど<br>
-        さまざまな効果が期待できます。<br>
+        やるべきことを顕在化させることで、<br class="none-599">今自分が何をすべきなのかということが<br class="none-599">明確になり、集中して業務に取り組める<br class="none-599">ようになります。<br><br>
+        todoリストを活用することで、<br class="none-599">作業効率が上がるなど<br class="none-599">さまざまな効果が期待できます。<br>
       </p>
     </div>
-  </div>
 
-  <div class="top-about-2">
-    <div class="top-about-2-1"></div>
-    <div class="top-about-2-2"></div>
-    <div class="top-about-2-3">
+    <div class="top-3-square"></div>
+    <%= image_tag "top-3.jpg", class:"top-3-img" %>
+    <div class="top-3-text">
       <p>What you can do with ToDo list</p>
-      <h1>ToDoリストでできること</h1>
+      <div class="top-3-h1"><h1>ToDoリストで<br><span>できること</span></h1></div>
       <p>
         ・やるべきことの抜けや漏れの防止<br>
         ・やるべきことの洗い出し<br>
         ・優先度の確認<br>
         ・仕事の進捗管理<br><br>
-        todoリストを使いこなせるようになると、<br>
-        仕事の効率が上がるだけでなく<br>
-        漏れなく正確にタスク処理ができるように<br>
-        なります。<br>
+        todoリストを使いこなせるようになると、<br class="none-599">仕事の効率が上がるだけでなく<br class="none-599">漏れなく正確にタスク処理ができるように<br class="none-599">なります。<br>
       </p>
     </div>
   </div>
 
-  <div class="top-about-4">
-    <div class="top-about-4-1">
-      <div class="top-about-4-1-1">
+  <div class="top-4">
+    <%= image_tag "top-4.jpg", class:"top-4-img" %>
+    <div class="top-4-text">
       <h2>for a comfortable life</h2>
       <h1>Do tasks efficiently</h1>
       <p><%= link_to "with this app", new_user_session_path, class: "top-login" %>to be happy</p>
     </div>
-    <div class="top-about-4-2">
+    <div class="top-4-square">
     </div>
   </div>
-
 </div>
 
 <footer>
   <div class="top-footer-container">
     <div class="fotter-text">
-      <%= link_to "about", "#" %>
-      <%= link_to "terms of service", "#" %>
-      <%= link_to "contact", "#" %>
-      <%= link_to "privacy policy", "#" %>
+      <div class="fotter-text-1">
+        <%= link_to "about", "#" %>
+        <%= link_to "contact", "#" %>
+      </div>
+      <div class="fotter-text-2">
+        <%= link_to "terms of service", "#" %>
+        <%= link_to "privacy policy", "#" %>
+      </div>
     </div>
     <div class="follow">follow me</div>
     <div class="footer-icons">
