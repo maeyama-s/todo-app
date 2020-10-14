@@ -56,6 +56,7 @@ form input[type="submit"] {
   border-radius: 5px;
   color: #fff;
   font-size: 18px;
+  font-weight: bold;
   /* デフォルトのnormalが適用されていたため、上書き。 */
   letter-spacing: 0.25em;
   /* ボタンにカーソルを合わせた時、カーソルが変わるように。devise共通の上書き。 */

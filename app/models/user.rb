@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   # 他テーブルとのアソシエーション
-  has_many :tasks
+  has_many :tasks, dependent: :destroy
 end

@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="devise-container">
-<h2 class="user-edit-title">Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="user-edit-title">ユーザー情報編集</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%# <%= render "devise/shared/error_messages", resource: resource %>
@@ -10,9 +10,16 @@
 
   <div class="field">
     <div class="user-edit-label">
+      <%= f.label :nickname %><br />
+    </div>
+    <%= f.text_field :nickname, autofocus: true %><br />
+  </div>
+
+  <div class="field">
+    <div class="user-edit-label">
       <%= f.label :email %><br />
     </div>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -49,9 +56,9 @@
   </div>
 <% end %>
 
-<h3 class="user-cancel user-edit-title">Cancel my account</h3>
+<h3 class="user-cancel user-edit-title">アカウント削除</h3>
 
-<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+<%= button_to "Account delete", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 
 <%= link_to "戻る", :back %>
 </div>
