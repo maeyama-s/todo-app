@@ -621,6 +621,14 @@ select {
 }
 
 @media (max-width: 599px) {
+  .top-1 {
+    height: 500px;
+  }
+
+  .top-1-square {
+    height: 400px;
+  }
+
   .top-1-h1 {
     font-size: 25px;
     color: white;
@@ -631,27 +639,39 @@ select {
     font-size: 10px;
   }
   .top-2 {
-    height: 1800px;
+    height: 1690px;
     width: 100%;
     position: relative;
+  }
+
+  .top-2-square {
+    top: 200px;
+  }
+
+  .top-2-img {
+    top: 100px;
   }
   
   .top-2-text {
     background-color: white;
     width: 100%;
     position: absolute;
-    top: 480px;
+    top: 410px;
     left: 0;
     padding: 35px;
     color: rgb(95, 95, 95);
+  }
+
+  .top-3-h1 {
+    height: auto;
   }
   
   .top-3-square {
     background-color: rgb(255, 189, 68);
     height: 350px;
-    width: 100px;
+    width: 80px;
     position: absolute;
-    top: 900px;
+    top: 800px;
     right: 5%;
   }
   
@@ -659,7 +679,7 @@ select {
     height: 350px;
     width: 233px;
     position: absolute;
-    top: 950px;
+    top: 880px;
     right: 11%;
   }
   
@@ -667,7 +687,7 @@ select {
     background-color: white;
     width: 100%;
     position: absolute;
-    top: 1250px;
+    top: 1200px;
     right: 0;
     padding: 35px;
     color: rgb(95, 95, 95);
@@ -675,6 +695,16 @@ select {
 
   .top-3-text span {
     float: none;
+  }
+
+  .top-4 {
+    height: 500px;
+    margin-bottom: 80px;
+  }
+
+  .top-4-square {
+    top: 100px;
+    height: 400px;
   }
 
   .none-599 {
@@ -778,4 +808,6 @@ select {
   .task-contents {
     font-size: 12px;
   }
+
+
 }
