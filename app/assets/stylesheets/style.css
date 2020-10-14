@@ -150,8 +150,27 @@ select {
 /* footer */
 
 /* header */
+.header-left {
+  width: 15%;
+  height: 95px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-right{
+  width: 15%;
+  height: 95px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 .header-container {
   width: 70%;
+  height: 95px;
   padding: 30px 10%;
   border-bottom: 1px solid #333;
   /* Font Awesomeのアイコンサイズ */
@@ -173,9 +192,8 @@ select {
   display: flex;
 }
 
-.fa-home, .fa-calendar-plus, .fa-user-circle {
-  /* ログアウト画像（Font Awesomeにアイコンなかった）に色を合わせる */
-  color: rgb(73, 73, 73);
+.fa-home, .fa-calendar-plus, .fa-user-circle, .fa-sign-out-alt {
+  color: rgb(83, 83, 83);
 }
 
 .fa-home, .fa-user-circle {
@@ -184,13 +202,6 @@ select {
 
 .lists-right {
   display: flex;
-}
-
-.logout-icon {
-  background-image: url(logout.jpg);
-  background-size: cover;
-  width: 35px;
-  height: 35px;
 }
 /* header */
 
@@ -578,6 +589,19 @@ select {
     display: flex;
     justify-content: space-around;
   }
+
+  .fa-home, .fa-user-circle {
+    margin-right: 0;
+  }
+
+  .lists-left, .lists-right {
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .header-container {
+    padding: 30px 0;
+  }
 }
 
 @media (max-width: 599px) {
@@ -692,9 +716,5 @@ select {
 
   form input[type="submit"] {
     font-size: 15px;
-  }
-
-  .header-container {
-    
   }
 }

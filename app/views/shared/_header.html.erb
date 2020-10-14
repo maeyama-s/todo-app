@@ -1,5 +1,5 @@
 <header>
-
+  <div class="header-left"></div>
   <div class='header-container'>
     <div class='lists-left'>
       <div class="top">
@@ -21,10 +21,11 @@
       </div>
       <div class="logout">
         <%= link_to destroy_user_session_path, method: :delete, class: "logout" do %>
-          <div class="logout-icon"></div>
+          <i class="fas fa-sign-out-alt fa-fw fa-2x "></i>
         <% end %>
       </div>
     </div>
   </div>
+  <div class="header-right"></div>
   
 </header>
