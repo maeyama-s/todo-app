@@ -50,6 +50,10 @@ form input, textarea {
   border: 1px solid #bdbdbd;
   border-radius: 5px;
 }
+/* スマホの入力フォームが勝手にズームする対策 */
+input {
+  font-size:16px;
+}
 
 form input[type="submit"] {
   background-color:rgb(255, 189, 68);
