@@ -6,25 +6,33 @@
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class="field">
-      <%= f.label :nickname %> (6文字以内)<br />
+      <div class="sign-up-label">
+        <%= f.label :nickname %>(6文字以内)
+      </div>
       <%= f.text_field :nickname, autofocus: true, maxlength: "6" %>
     </div>
 
     <div class="field">
-      <%= f.label :email %>
+      <div class="sign-up-label">
+        <%= f.label :email %>
+      </div>
       <%= f.email_field :email %>
     </div>
 
     <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-        (<%= @minimum_password_length %>文字以上)
-      <% end %><br />
+      <div class="sign-up-label">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          (<%= @minimum_password_length %>文字以上)
+        <% end %>
+      </div>
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <div class="sign-up-label">
+        <%= f.label :password_confirmation %>
+      </div>
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 

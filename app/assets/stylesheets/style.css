@@ -64,7 +64,7 @@ form input[type="submit"]:hover {
 
 .devise-container, .edit-container, .new-container, .show-container {
   margin: 150px auto 50px auto;
-  max-width: 600px;
+  max-width: 550px;
   padding: 50px;
   border: 1px solid rgb(133, 133, 133);
   border-radius: 30px;
@@ -105,7 +105,7 @@ select {
 
 .devise-container-login, .devise-container-sign-up {
   margin: 50px auto 50px auto;
-  max-width: 600px;
+  max-width: 550px;
   padding: 50px;
   border: 1px solid rgb(133, 133, 133);
   border-radius: 30px;
@@ -249,7 +249,7 @@ select {
 
 .new-title {
   margin: 150px auto 0 auto;
-  max-width: 600px;
+  max-width: 550px;
   padding: 30px;
   border-radius: 30px;
   border: 1px solid rgb(133, 133, 133);
@@ -377,7 +377,7 @@ select {
   position: absolute;
   top: 350px;
   left: 36%;
-  padding: 53px;
+  padding: 50px;
   color: rgb(95, 95, 95);
 }
 
@@ -405,7 +405,7 @@ select {
   position: absolute;
   top: 950px;
   right: 36%;
-  padding: 53px;
+  padding: 50px;
   color: rgb(95, 95, 95);
 }
 
@@ -672,4 +672,15 @@ select {
     display: flex;
     justify-content: space-around;
   }
+
+  .devise-container-login, .devise-container-sign-up {
+    margin: 50px;
+  }
+
+  .sign-up-label {
+    font-size: 10px;
+    display: flex;
+  }
+
+  
 }
