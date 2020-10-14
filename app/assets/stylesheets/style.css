@@ -61,6 +61,8 @@ form input[type="submit"] {
   letter-spacing: 0.25em;
   /* ボタンにカーソルを合わせた時、カーソルが変わるように。devise共通の上書き。 */
   cursor: pointer;
+  /* スマホサイトでサブミットボタンの表示をオリジナルデザインにする */
+  -webkit-appearance: none;
 }
 
 form input[type="submit"]:hover {
