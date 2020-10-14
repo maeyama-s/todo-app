@@ -122,6 +122,10 @@ select {
 .sign-up-h2 {
   margin-bottom: 10px;
 }
+
+.user-cancel{
+  margin-top: 20px;
+}
 /* devise */
 
 /* edit */
@@ -699,6 +703,7 @@ select {
 
   .devise-container-login, .devise-container-sign-up {
     margin: 50px;
+    padding: 50px 20px;
   }
 
   .sign-up-label {
@@ -712,6 +717,7 @@ select {
 
   .new-title {
     margin: 150px 50px 0 50px;
+    padding: 30px 20px;
   }
 
   form input[type="submit"] {
@@ -720,6 +726,7 @@ select {
 
   .devise-container, .edit-container, .new-container, .show-container {
     margin: 150px 50px 50px 50px;
+    padding: 50px 20px;
   }
 
   .select-date {
@@ -729,7 +736,7 @@ select {
   }
 
   #task_deadline_1i, #task_deadline_2i, #task_deadline_3i {
-    width: 75%;
+    width: 80%;
   }
 
   #task-category, #task-priority {
@@ -743,5 +750,17 @@ select {
 
   .new-container h2 {
     font-size: 15px;
+  }
+
+  .user-edit-label {
+    font-size: 10px;
+  }
+
+  .user-edit-title {
+    font-size: 15px;
+  }
+
+  .devise-container {
+    padding: 50px 20px;
   }
 }
