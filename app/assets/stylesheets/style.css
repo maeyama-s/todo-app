@@ -717,4 +717,31 @@ select {
   form input[type="submit"] {
     font-size: 15px;
   }
+
+  .devise-container, .edit-container, .new-container, .show-container {
+    margin: 150px 50px 50px 50px;
+  }
+
+  .select-date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #task_deadline_1i, #task_deadline_2i, #task_deadline_3i {
+    width: 75%;
+  }
+
+  #task-category, #task-priority {
+    width: 100%;
+  }
+
+  .new-select {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-container h2 {
+    font-size: 15px;
+  }
 }
