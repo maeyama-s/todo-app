@@ -10,9 +10,13 @@
 
       <%= form.text_field :title, placeholder: "タイトル" %>
       <%= form.text_area :details, placeholder: "詳細" %>
-      <%= form.date_select :deadline, placeholder: "deadline" %>
-      <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"task-category"}) %>
-      <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>
+      <div class="select-date">
+        <%= raw sprintf(form.date_select(:deadline, use_month_numbers: true, date_separator: '%s'),"<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>
+      <div class="new-select">
+        <%= form.collection_select(:category_id, Category.all, :id, :name, {include_blank: 'カテゴリー選択'}, {class:"select-box", id:"task-category"}) %>
+        <%= form.collection_select(:priority_id, Priority.all, :id, :name, {include_blank: '優先度選択'}, {class:"select-box", id:"task-priority"}) %>
+      </div>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
