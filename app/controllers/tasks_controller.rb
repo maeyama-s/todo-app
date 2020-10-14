@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
-  # tasksコントローラーのindexアクション以外にアクセスしようとするログインしていないユーザーはログインページへ遷移される。
+  # tasksコントローラーのtopアクション以外にアクセスしようとするログインしていないユーザーはログインページへ遷移される。
   before_action :authenticate_user!, except: :top
+  before_action :ensure_correct_user, only: [:show, :edit, :destroy]
 
   def top
   end
@@ -71,6 +72,12 @@ class TasksController < ApplicationController
 
   # Classの外部から呼ばれたら困るメソッドを隔離、可読性向上
   private
+
+  # 権限のないユーザーがタスクURLを入力した場合
+  def ensure_correct_user
+    task = Task.find(params[:id])
+    redirect_to tasks_path if current_user.id != task.user_id
+  end
 
   # 指定したキーを持つパラメーターのみを受け取るように制限する
   def task_params
