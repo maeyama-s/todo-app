@@ -404,12 +404,24 @@ select {
   left: 10%;
 }
 
-.top-2-img {
+.over-hidden-2 {
+  overflow: hidden;
   height: 500px;
   width: 333px;
   position: absolute;
   top: 200px;
   left: 17%;
+}
+
+.top-2-img {
+  height: 500px;
+  width: 333px;
+  transition-duration: 0.5s;
+}
+
+.top-2-img:hover {
+  transform: scale(1.3);
+  transition-duration: 0.5s;
 }
 
 .top-2-text {
@@ -432,12 +444,24 @@ select {
   right: 10%;
 }
 
-.top-3-img {
+.over-hidden-3 {
+  overflow: hidden;
   height: 500px;
   width: 333px;
   position: absolute;
   top: 800px;
   right: 17%;
+}
+
+.top-3-img {
+  height: 500px;
+  width: 333px;
+  transition-duration: 0.5s;
+}
+
+.top-3-img:hover {
+  transform: scale(1.3);
+  transition-duration: 0.5s;
 }
 
 .top-3-text {
@@ -557,13 +581,18 @@ select {
     top: 250px;
     left: 5%;
   }
-  
-  .top-2-img {
+
+  .over-hidden-2 {
     height: 350px;
     width: 233px;
     position: absolute;
     top: 150px;
     left: 11%;
+  }
+  
+  .top-2-img {
+    height: 350px;
+    width: 233px;
   }
   
   .top-2-text {
@@ -585,13 +614,18 @@ select {
     top: 700px;
     right: 5%;
   }
-  
-  .top-3-img {
+
+  .over-hidden-3 {
     height: 350px;
     width: 233px;
     position: absolute;
     top: 800px;
     right: 11%;
+  }
+  
+  .top-3-img {
+    height: 350px;
+    width: 233px;
   }
   
   .top-3-text {
@@ -683,7 +717,7 @@ select {
     top: 200px;
   }
 
-  .top-2-img {
+  .over-hidden-2 {
     top: 100px;
   }
   
@@ -710,7 +744,7 @@ select {
     right: 5%;
   }
   
-  .top-3-img {
+  .over-hidden-3 {
     height: 350px;
     width: 233px;
     position: absolute;
