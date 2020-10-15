@@ -4,24 +4,24 @@
     <div class='lists-left'>
       <div class="top">
         <%= link_to tasks_path, method: :get do %>
-          <i class="fas fa-home fa-fw fa-2x "></i>
+          <i class="fas fa-home fa-fw fa-2x h-material-icons"></i>
         <% end %>
       </div>
       <div class="home">
         <%= link_to new_task_path, method: :get do %>
-          <i class="far fa-calendar-plus fa-fw fa-2x "></i>
+          <i class="far fa-calendar-plus fa-fw fa-2x h-material-icons"></i>
         <% end %>
       </div>
     </div>
     <div class='lists-right'>
       <div class="user">
         <%= link_to edit_user_registration_path, method: :get do %>
-          <i class="fas fa-user-circle fa-fw fa-2x "></i>
+          <i class="fas fa-user-circle fa-fw fa-2x h-material-icons"></i>
         <% end %>
       </div>
       <div class="logout">
         <%= link_to destroy_user_session_path, method: :delete, class: "logout" do %>
-          <i class="fas fa-sign-out-alt fa-fw fa-2x "></i>
+          <i class="fas fa-sign-out-alt fa-fw fa-2x h-material-icons"></i>
         <% end %>
       </div>
     </div>

@@ -21,7 +21,7 @@
     <div class="task">
       <p>
         <%= link_to "/tasks/#{task.id}", method: :delete do %>
-          <i class="far fa-check-circle fa-lg"></i>
+          <i class="far fa-check-circle fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to(task.title, task_path(task.id), {class: "no-deadline"}) %>
       </p>
@@ -35,10 +35,10 @@
     <div class="task">
       <p>
         <%= link_to "/tasks/#{task.id}", method: :delete do %>
-          <i class="far fa-check-circle fa-lg"></i>
+          <i class="far fa-check-circle fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to "/tasks/#{task.id}/repeat", method: :post do %>
-          <i class="fas fa-redo-alt fa-lg"></i>
+          <i class="fas fa-redo-alt fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to(task.title, task_path(task.id), {class: "expired"}) %>
       </p>
@@ -52,10 +52,10 @@
     <div class="task">
       <p>
         <%= link_to "/tasks/#{task.id}", method: :delete do %>
-          <i class="far fa-check-circle fa-lg"></i>
+          <i class="far fa-check-circle fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to "/tasks/#{task.id}/repeat", method: :post do %>
-          <i class="fas fa-redo-alt fa-lg"></i>
+          <i class="fas fa-redo-alt fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to(task.title, task_path(task.id), {class: "today"}) %>
       </p>
@@ -69,10 +69,10 @@
     <div class="task">
       <p>
         <%= link_to "/tasks/#{task.id}", method: :delete do %>
-          <i class="far fa-check-circle fa-lg"></i>
+          <i class="far fa-check-circle fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to "/tasks/#{task.id}/repeat", method: :post do %>
-          <i class="fas fa-redo-alt fa-lg"></i>
+          <i class="fas fa-redo-alt fa-lg i-material-icons"></i>
         <% end %>
         <%= link_to(task.title, task_path(task.id), {class: "far-away"}) %>
       </p>

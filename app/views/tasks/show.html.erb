@@ -24,12 +24,14 @@
     <div class="task-contents"></div>
   <% end %>
   <div class="show-icons">
-  <%= link_to edit_task_path(@task.id), method: :get do %>
-    <i class="fas fa-edit fa-fw fa-lg"></i>
-  <% end %>
-  <%= link_to "/tasks/#{@task.id}", method: :delete do %>
-    <i class="fas fa-trash-alt fa-fw fa-lg"></i>
-  <% end %>
+    <div class="show-icons-1">
+      <%= link_to edit_task_path(@task.id), method: :get do %>
+        <i class="fas fa-edit fa-fw fa-lg i-material-icons"></i>
+      <% end %>
+      <%= link_to "/tasks/#{@task.id}", method: :delete do %>
+        <i class="fas fa-trash-alt fa-fw fa-lg i-material-icons"></i>
+      <% end %>
+    </div>
   </div>
 </div>
 

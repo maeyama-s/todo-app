@@ -163,10 +163,6 @@ select {
   display: flex;
   justify-content: space-around;
 }
-
-.fb-blue, .line-green, .tw-blue {
-  color: rgb(83, 83, 83);
-}
 /* footer */
 
 /* header */
@@ -193,11 +189,10 @@ select {
   height: 95px;
   padding: 30px 10%;
   border-bottom: 1px solid #333;
-  /* Font Awesomeのアイコンサイズ */
-  font-size: 16px;
   /* 指定された要素の子要素が横並びになる */
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* fixedで固定しているから透明ではいけない */
   background-color: white;
   /* 指定位置に固定 */
@@ -210,18 +205,14 @@ select {
 
 .lists-left {
   display: flex;
-}
-
-.fa-home, .fa-calendar-plus, .fa-user-circle, .fa-sign-out-alt {
-  color: rgb(83, 83, 83);
-}
-
-.fa-home, .fa-user-circle {
-  margin-right: 80px;
+  width: 40%;
+  justify-content: space-around;
 }
 
 .lists-right {
   display: flex;
+  width: 40%;
+  justify-content: space-around;
 }
 /* header */
 
@@ -235,7 +226,7 @@ select {
 .task {
   border-bottom: 1px solid #333333;
   padding: 10px;
-  max-width: 800px;
+  max-width: 900px;
   margin-bottom: 10px;
   /* titleの折り返しを禁止 */
   white-space: nowrap;
@@ -243,15 +234,14 @@ select {
   overflow: scroll;
 }
 
+.task a {
+  margin-left: 10px;
+}
+
 .task:hover {
   box-shadow: 1px 1px 1px 3px rgba(41, 41, 41, 0.4);
   /* 変化するまでの時間を設定 */
   transition: 0.5s;
-}
-
-.fa-check-circle, .fa-redo-alt {
-  margin-right: 20px;
-  color: #333333;
 }
 
 .no-deadline {
@@ -313,6 +303,13 @@ select {
 .show-icons {
   display: flex;
   justify-content: flex-end;
+}
+
+.show-icons-1 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .fa-edit, .fa-trash-alt {
@@ -667,10 +664,6 @@ select {
     width: 50%;
     display: flex;
     justify-content: space-around;
-  }
-
-  .fa-home, .fa-user-circle {
-    margin-right: 0;
   }
 
   .lists-left, .lists-right {
