@@ -67,6 +67,7 @@ form input[type="submit"] {
   cursor: pointer;
   /* スマホサイトでサブミットボタンの表示をオリジナルデザインにする */
   -webkit-appearance: none;
+  transition-duration: 0.5s;
 }
 
 form input[type="submit"]:hover {
@@ -363,7 +364,7 @@ select {
   background-color: rgb(255, 189, 68);
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
   display: flex;
   align-items: center;
   justify-content: center;
