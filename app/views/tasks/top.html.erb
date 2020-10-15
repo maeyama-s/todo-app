@@ -5,9 +5,9 @@
       <div class="top-1-h1">
         <h1>ToDo App</h1>
       </div>
-      <div class="top-1-link">
-        <%= link_to "ログイン", new_user_session_path, class: "top-login" %>
-        <%= link_to "新規登録", new_user_registration_path, class: "top-sign-up" %>
+      <div class="wrap">
+        <%= link_to "ログイン", new_user_session_path, class: "button login" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "button signup" %>
       </div>
     </div>
     <div class="top-1-square">
@@ -47,7 +47,9 @@
     <div class="top-4-text">
       <h2>for a comfortable life</h2>
       <h1>Do tasks efficiently</h1>
-      <p><%= link_to "with this app", new_user_session_path, class: "top-login" %>to be happy</p>
+      <div class="top-4-comment">
+        <%= link_to "with this app", new_user_session_path, class: "button top-4-link" %><p>to be happy</p>
+      </div>
     </div>
     <div class="top-4-square">
     </div>
