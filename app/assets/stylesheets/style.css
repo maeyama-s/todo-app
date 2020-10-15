@@ -393,6 +393,10 @@ select {
   position: relative;
 }
 
+.top-2 h1 {
+  font-size: 25px;
+}
+
 .top-2-square {
   background-color: rgb(255, 189, 68);
   height: 500px;
@@ -415,6 +419,9 @@ select {
   height: 500px;
   width: 333px;
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .top-2-img:hover {
@@ -427,7 +434,7 @@ select {
   height: 450px;
   width: 450px;
   position: absolute;
-  top: 350px;
+  top: 400px;
   left: 36%;
   padding: 50px;
   color: rgb(95, 95, 95);
@@ -447,7 +454,7 @@ select {
   height: 500px;
   width: 333px;
   position: absolute;
-  top: 800px;
+  top: 820px;
   right: 17%;
 }
 
@@ -455,6 +462,9 @@ select {
   height: 500px;
   width: 333px;
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .top-3-img:hover {
@@ -475,10 +485,6 @@ select {
 
 .top-3-text span {
   float: right;
-}
-
-.top-3-h1 {
-  height: 103px;
 }
 
 .top-4 {
@@ -679,6 +685,7 @@ select {
 @media (max-width: 599px) {
   .top-1 {
     height: 500px;
+    margin-bottom: 50px;
   }
 
   .top-1-square {
@@ -705,6 +712,10 @@ select {
     height: 1690px;
     width: 100%;
     position: relative;
+  }
+
+  .top-2 h1 {
+    font-size: 20px;
   }
 
   .top-2-square {

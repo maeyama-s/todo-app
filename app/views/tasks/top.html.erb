@@ -1,3 +1,4 @@
+
 <div class="top-page">
   <div class="top-1">
     <%= image_tag "top-1.jpg", class:"top-1-img" %>
@@ -15,35 +16,37 @@
   </div>
 
   <div class="top-2">
-    <div class="top-2-square"></div>
-    <div class="over-hidden-2">
-      <%= image_tag "top-2.jpg", class:"top-2-img" %>
-    </div>
-    <div class="top-2-text">
-      <p>What is a ToDo list</p>
-      <h1>ToDoリストとは</h1>
-      <p>
-        やるべき事をリストアップしたもの。<br><br>
-        やるべきことを顕在化させることで、<br class="none-599">今自分が何をすべきなのかということが<br class="none-599">明確になり、集中して業務に取り組める<br class="none-599">ようになります。<br><br>
-        ToDoリストを活用することで、<br class="none-599">作業効率が上がるなど<br class="none-599">さまざまな効果が期待できます。<br>
-      </p>
-    </div>
+    <section>
+      <div class="sa sa--lr top-2-square"></div>
+      <div class="sa sa--lr over-hidden-2"">
+        <%= image_tag "top-2.jpg", class:"top-2-img" %>
+      </div>
+      <div class="sa sa--lr top-2-text">
+        <p>What is a ToDo list</p>
+        <h1>ToDoリストとは</h1>
+        <p>
+          やるべき事をリストアップしたもの。<br><br>
+          やるべきことを顕在化させることで、<br class="none-599">今自分が何をすべきなのかということが<br class="none-599">明確になり、集中して業務に取り組める<br class="none-599">ようになります。<br><br>
+          ToDoリストを活用することで、<br class="none-599">作業効率が上がるなど<br class="none-599">さまざまな効果が期待できます。<br>
+        </p>
+      </div>
 
-    <div class="top-3-square"></div>
-    <div class="over-hidden-3">
-      <%= image_tag "top-3.jpg", class:"top-3-img" %>
-    </div>
-    <div class="top-3-text">
-      <p>What you can do with ToDo list</p>
-      <div class="top-3-h1"><h1>ToDoリストで<br class="none-599"><span>できること</span></h1></div>
-      <p>
-        ・やるべきことの抜けや漏れの防止<br>
-        ・やるべきことの洗い出し<br>
-        ・優先度の確認<br>
-        ・仕事の進捗管理<br><br>
-        ToDoリストを使いこなせるようになると、<br class="none-599">仕事の効率が上がるだけでなく<br class="none-599">漏れなく正確にタスク処理ができるように<br class="none-599">なります。<br>
-      </p>
-    </div>
+      <div class="sa sa--rl top-3-square"></div>
+      <div class="sa sa--rl over-hidden-3">
+        <%= image_tag "top-3.jpg", class:"top-3-img" %>
+      </div>
+      <div class="sa sa--rl top-3-text">
+        <p>What you can do with ToDo list</p>
+        <h1>ToDoリストでできること</h1>
+        <p>
+          ・やるべきことの抜けや漏れの防止<br>
+          ・やるべきことの洗い出し<br>
+          ・優先度の確認<br>
+          ・仕事の進捗管理<br><br>
+          ToDoリストを使いこなせるようになると、<br class="none-599">仕事の効率が上がるだけでなく<br class="none-599">漏れなく正確にタスク処理ができるように<br class="none-599">なります。<br>
+        </p>
+      </div>
+    </section>
   </div>
 
   <div class="top-4">
@@ -86,3 +89,5 @@
     </div>
   </div>
 </footer>
+<%# jaを実行するために必要 %>
+<%= javascript_pack_tag 'top/sa' %>

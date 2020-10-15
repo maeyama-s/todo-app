@@ -8,7 +8,8 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 // JavaScriptファイルを読み込む
-require("../create_task")
+require("./create_task")
+require("./top/sa")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
