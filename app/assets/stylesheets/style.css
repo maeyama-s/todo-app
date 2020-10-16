@@ -367,10 +367,6 @@ select {
   justify-content: center;
   }
 
-.login {
-  margin-right: 20px;
-}
-
 .button:hover {
   background-color: rgb(255, 174, 23);
   box-shadow: 0px 15px 20px rgb(255, 174, 23);
@@ -692,6 +688,10 @@ select {
     height: 400px;
   }
 
+  .top-1-text {
+    left: 9%;
+  }
+
   .top-1-h1 {
     font-size: 25px;
     color: white;
@@ -703,10 +703,6 @@ select {
     height: 40px;
     font-size: 12px;
     }
-
-  .login {
-    margin-right: 10px;
-  }
 
   .top-2 {
     height: 1690px;

@@ -7,8 +7,43 @@
         <h1>ToDo App</h1>
       </div>
       <div class="wrap">
-        <%= link_to "ログイン", new_user_session_path, class: "button login" %>
-        <%= link_to "新規登録", new_user_registration_path, class: "button signup" %>
+        <div id="Awesome" class="anim750">
+          <%= link_to new_user_session_path, method: :get do %>
+            <div class="reveal circle_wrapper">
+              <div class="circle">Hello!</div>
+            </div>
+            <div class="sticky anim750">
+              <div class="front circle_wrapper anim750">
+                <div class="circle anim750"></div>
+              </div>
+            </div>
+            <h4>ログイン</h4>
+            <div class="sticky anim750">
+              <div class="back circle_wrapper anim750">
+                <div class="circle anim750"></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <div id="Awesome" class="anim750">
+          <%= link_to new_user_registration_path, method: :get do %>
+            <div class="reveal circle_wrapper">
+              <div class="circle">Welcome!</div>
+            </div>
+            <div class="sticky anim750">
+              <div class="front circle_wrapper anim750">
+                <div class="circle anim750"></div>
+              </div>
+            </div>
+            <h4>新規登録</h4>
+            <div class="sticky anim750">
+              <div class="back circle_wrapper anim750">
+                <div class="circle anim750"></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="top-1-square">
