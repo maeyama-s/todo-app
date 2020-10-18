@@ -34,7 +34,7 @@ function task(){
         <div data-id=${item.id}>
           <div class="task", id="task-list">
             <p>
-              <a href="/tasks/${item.id}", data-method="delete"><i class="far fa-check-circle fa-lg"></i></a>
+              <a href="/tasks/${item.id}", data-method="delete"><i class="far fa-check-circle fa-lg i-material-icons"></i></a>
               <a href="/tasks/${item.id}", class: "no-deadline"><font color="green">${item.title}</a>
             </p>
           </div>

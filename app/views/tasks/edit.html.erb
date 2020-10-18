@@ -17,7 +17,7 @@
         <%= form.collection_select(:category_id, Category.all, :id, :name, {include_blank: 'カテゴリー選択'}, {class:"select-box", id:"task-category"}) %>
         <%= form.collection_select(:priority_id, Priority.all, :id, :name, {include_blank: '優先度選択'}, {class:"select-box", id:"task-priority"}) %>
       </div>
-      <%= form.submit "編集" %>
+      <%= form.submit "更新" %>
     <% end %>
   </div>
 
