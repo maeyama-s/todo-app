@@ -1,57 +1,53 @@
-# README
+# アプリケーション名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ToDo App
 
-Things you may want to cover:
+# アプリケーション概要
 
-* Ruby version
+タスク管理アプリケーションです。
 
-* System dependencies
+ユーザーとタスクを管理し、ユーザー登録をするとタスクを作成することができます。
 
-* Configuration
+作成したタスクに対して、編集と削除をすることができます。
 
-#
+タスクには期限・カテゴリー・優先度を設定することができ、タスク一覧画面では設定された期限によって振り分けられ表示されます。
 
-# テーブル設計
+タイトルのみ入力し非同期でタスクを作成することもできます。
 
-## usersテーブル
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| nickname           | string | null: false |
-| email              | string | primary key |
-| encrypted_password | string | null: false |
+# URL
 
-### Association
+    https://todo-app-29807.herokuapp.com/
 
-- has_many :tasks
+# テスト用アカウント
 
-## tasksテーブル
+アクセスすると、ユーザー名とパスワードの入力を求めるポップアップウィンドウが表示されるので以下の通り入力してください。（Basic認証）
 
-| Column      | Type       | Options           |
-| ----------- | ---------- | ----------------- |
-| user        | references | foreign_key: true |
-| title       | string     | null: false       |
-| details     | text       |                   |
-| deadline    | date       |                   |
-| category_id | integer    |                   |
-| priority_id | integer    |                   |
+    ・ユーザー名： maeyama
 
-### Association
+    ・パスワード： 1258
 
-- belongs_to :user
+テスト用アカウント
 
-#
+    ・Eメール： taro@email
 
-* Database creation
+    ・パスワード： yamada1234
 
-* Database initialization
+# 利用方法
 
-* How to run the test suite
+TOPページのログインボタンをクリックし、遷移先のログインページにユーザー情報を入力しログインします。
 
-* Services (job queues, cache servers, search engines, etc.)
+※アカウント削除機能もありますので、削除されてログインできない可能性があります。その場合は新規登録してください。入力内容は架空のものにしてください。
 
-* Deployment instructions
+HOMEページに遷移しますのでヘッダーのタスク作成アイコン、もしくは画面上部にあるタスク作成ブロックからタスクを作成することができます。
 
-* ...
+作成したタスクをクリックすると、詳細ページへ遷移します。
+編集アイコンをクリックし、編集することができます。
+削除アイコンをクリックし、削除することができます。
+
+作成したタスクの左側にあるチェックアイコンをクリックすると、タスクが削除されます。
+ループアイコンをクリックすると、期限が１日後に設定されたタスクが複製されます。
+
+ヘッダーのユーザーアイコンをクリックすると、ニックネーム・Eメールアドレス・パスワードの変更及び、アカウント削除ができます。
+
+ヘッダーのログアウトアイコンをクリックすると、ログアウトできます。
