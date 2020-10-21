@@ -7,7 +7,7 @@
 
     <div class="field">
       <div class="sign-up-label">
-        <%= f.label :nickname %>(6文字以内)
+        <%= f.label :nickname %>
       </div>
       <%= f.text_field :nickname, autofocus: true %>
     </div>
@@ -23,7 +23,7 @@
       <div class="sign-up-label">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-          (<%= @minimum_password_length %>文字以上)
+          (<%= @minimum_password_length %>文字以上の半角英数字)
         <% end %>
       </div>
       <%= f.password_field :password, autocomplete: "off" %>

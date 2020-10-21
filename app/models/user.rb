@@ -4,7 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :nickname, presence: true, length: { maximum: 6 }
+  # ニックネームのバリデーション
+  validates :nickname, presence: true
+  # passwordの英数字混合のバリデーション
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX
   # 他テーブルとのアソシエーション
   has_many :tasks, dependent: :destroy
 end
