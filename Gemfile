@@ -33,6 +33,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Ruby on Railsのテストコードを書くために用いられるGem
   gem 'rspec-rails', '~> 4.0.0'
+  # インスタンスをまとめることができるGem
+  gem 'factory_bot_rails'
+  # ランダムな値を生成するGem
+  gem 'faker'
 end
 
 group :development do
