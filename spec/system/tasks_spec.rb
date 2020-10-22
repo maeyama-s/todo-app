@@ -10,13 +10,7 @@ RSpec.describe "タスク作成", type: :system do
   context 'タスク作成ができるとき'do
     it 'ログインしたユーザーはタスク作成できる' do
       # ログインする
-      visit root_path
-      expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in 'Eメール', with: @user.email
-      fill_in 'パスワード', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq tasks_path
+      sign_in(@user)
       # タスク作成ページに移動する
       visit new_task_path
       # フォームに情報を入力する
@@ -57,13 +51,7 @@ RSpec.describe 'タスク編集', type: :system do
   context 'タスク編集ができるとき' do
     it 'ログインしたユーザーは自分が作成したタスクの編集ができる' do
       # タスクを作成したユーザーでログインする
-      visit root_path
-      expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in 'Eメール', with: @task.user.email
-      fill_in 'パスワード', with: @task.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq tasks_path
+      sign_in(@task.user)
       # タスクにリンクがあることを確認する
       have_link @task.title, href: task_path(@task)
       # 詳細ページへ遷移する
@@ -110,13 +98,7 @@ RSpec.describe 'タスク削除', type: :system do
   context 'タスク削除ができるとき' do
     it 'ログインしたユーザーは自らが投稿したタスクの削除ができる' do
       # タスクを投稿したユーザーでログインする
-      visit root_path
-      expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in 'Eメール', with: @task.user.email
-      fill_in 'パスワード', with: @task.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq tasks_path
+      sign_in(@task.user)
       # 投稿を削除するとレコードの数が1減ることを確認する
       expect{
         page.first(".fa-check-circle").click
@@ -145,14 +127,8 @@ RSpec.describe 'タスク詳細', type: :system do
   end
 
   it 'ログインしたユーザーはタスク詳細ページに遷移してタスクの内容が表示される' do
-    # ログインする
-    visit root_path
-    expect(page).to have_content('ログイン')
-    visit new_user_session_path
-    fill_in 'Eメール', with: @task.user.email
-    fill_in 'パスワード', with: @task.user.password
-    find('input[name="commit"]').click
-    expect(current_path).to eq tasks_path
+    # タスクを投稿したユーザーでログインする
+      sign_in(@task.user)
     # タスクにリンクがあることを確認する
     have_link @task.title, href: task_path(@task)
     # 詳細ページに遷移する
@@ -181,13 +157,7 @@ RSpec.describe "非同期でタスク作成", type: :system do
   context '非同期でタスク作成ができるとき'do
     it 'ログインしたユーザーは非同期でタスク作成できる' do
       # ログインする
-      visit root_path
-      expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in 'Eメール', with: @user.email
-      fill_in 'パスワード', with: @user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq tasks_path
+      sign_in(@user)
       # indexページに遷移されることを確認する
       expect(current_path).to eq tasks_path
       # フォームに情報を入力する
@@ -220,13 +190,7 @@ RSpec.describe 'タスク複製', type: :system do
   context 'タスク複製ができるとき' do
     it 'ログインしたユーザーは自らが投稿したタスクの複製ができる' do
       # タスクを投稿したユーザーでログインする
-      visit root_path
-      expect(page).to have_content('ログイン')
-      visit new_user_session_path
-      fill_in 'Eメール', with: @task.user.email
-      fill_in 'パスワード', with: @task.user.password
-      find('input[name="commit"]').click
-      expect(current_path).to eq tasks_path
+      sign_in(@task.user)
       # 投稿を複製するとレコードの数が1増えることを確認する
       expect{
         page.first(".fa-redo-alt").click
